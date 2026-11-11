@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>PREVIEW | AI教材スタジオ</title><meta name="yoshilab-studio-api" content="https://studioapi-bfaa4wjjga-an.a.run.app">
+<link rel="stylesheet" href="./teacher-studio.css"></head>
+<body><main><header><div><strong>Yoshi.Lab / TEACHER</strong><h1>✨ AI教材スタジオ</h1></div><div class="actions"><button id="login">Googleログイン</button><button id="logout">ログアウト</button></div></header>
+<p class="preview-notice">テスト環境｜教材公開は無効です。下書きはこのブラウザだけに保存します。</p><section class="panel"><h2>STEP 1｜教材本文を入力</h2><p id="authStatus" class="muted">ログイン・教員権限を確認中…</p>
+<div id="editor" class="hidden"><div class="grid">
+<label>科目<select id="subject"><option value="英C">英語コミュニケーション</option><option value="論表">論理表現</option></select></label>
+<label>Lesson <input id="lesson" maxlength="80" placeholder="例：8 / 12 不定詞(1)"></label>
+<label>Part <input id="part" maxlength="30" value="1"></label>
+<label>問題数（各種類）<input id="count" type="number" min="1" max="15" value="4"></label></div>
+<p><label>英文（個人情報を含めない）<textarea id="source" placeholder="本文を貼り付ける"></textarea></label></p>
+<div class="actions"><button class="primary" id="generate">✨ AIで5種類を生成</button><button id="save">下書きを保存</button><button id="restore">保存した下書きを開く</button></div></div>
+<p id="message" role="status" class="status muted"></p></section>
+<section class="panel hidden" id="review"><h2>STEP 2｜問題を確認・編集</h2><p class="muted">採用する問題にチェックを入れ、問題文・正解・日本語訳を確認してください。AIの出力は必ず教員が確認します。</p><div id="questions"></div></section>
+
+</main><script src="./studio-config.js"></script><script type="module" src="./teacher-studio.js"></script></body></html>
